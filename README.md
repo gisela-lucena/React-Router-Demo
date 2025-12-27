@@ -27,33 +27,6 @@ CSS3
 Estilização dos componentes
 Vite
 Ferramenta de build e desenvolvimento
-📁 Estrutura do Projeto
-src/
-├── components/
-│ ├── App.jsx
-│ ├── Header/
-│ │ ├── Header.jsx
-│ │ └── Header.css
-│ ├── Dashboard/
-│ │ ├── Dashboard.jsx
-│ │ └── Dashboard.css
-│ ├── Reviews/
-│ │ ├── Reviews.jsx
-│ │ └── Reviews.css
-│ ├── AboutMe/
-│ │ ├── AboutMe.jsx
-│ │ ├── AboutMe.css
-│ │ ├── MyStory.jsx
-│ │ ├── Hobbies.jsx
-│ │ └── Contact.jsx
-│ └── AboutUs/
-│ ├── AboutUs.jsx
-│ ├── AboutUs.css
-│ ├── Mission.jsx
-│ └── History.jsx
-├── main.jsx
-└── index.css
-⚙️ Instalação e Execução
 
 ### Pré-requisitos
 
