@@ -1,24 +1,94 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# React-Router-Demo
-React-Router-Demo
-=======
-# react-router-demo-es
->>>>>>> fb58b24 (Initial commit)
-=======
-# Emoji Critic
+README - Emoji Critic
+📖 Sobre o Projeto
+Emoji Critic é uma aplicação web desenvolvida em React para demonstrar conceitos de roteamento com React Router. O projeto simula um site de avaliações de emojis, onde os usuários podem navegar entre diferentes seções e visualizar informações organizadas através de rotas aninhadas.
 
-A small React application built with Vite. Used as a React Router demonstration by TripleTen's Software Engineering bootcamp.
->>>>>>> 829a7d6 (feat: add initial content)
-=======
-# Crítico de emojis
+🚀 Demonstração
+O aplicativo permite navegação entre diferentes páginas:
 
-Um aplicativo React simples criado com Vite. Usado para demonstrar o React Router no bootcamp de Desenvolvimento de Software da TripleTen.
->>>>>>> 4d46735 (feat/refactor: add PT language content, move App to root of components directory)
-=======
-# Emoji Critic
+Dashboard
+Página inicial com informações gerais
+Reviews
+Seção de avaliações de emojis
+About Me
+Informações pessoais com subseções:
+Minha História (/about-me/my-story)
+Hobbies (/about-me/hobbies)
+Contato (/about-me/contact)
+About Us
+Informações sobre o site com subseções:
+Missão (/about-us/mission)
+História (/about-us/history)
+🛠️ Tecnologias Utilizadas
+React
+Biblioteca JavaScript para construção da interface
+React Router DOM v6
+Gerenciamento de rotas e navegação
+CSS3
+Estilização dos componentes
+Vite
+Ferramenta de build e desenvolvimento
+📁 Estrutura do Projeto
+src/
+├── components/
+│ ├── App.jsx
+│ ├── Header/
+│ │ ├── Header.jsx
+│ │ └── Header.css
+│ ├── Dashboard/
+│ │ ├── Dashboard.jsx
+│ │ └── Dashboard.css
+│ ├── Reviews/
+│ │ ├── Reviews.jsx
+│ │ └── Reviews.css
+│ ├── AboutMe/
+│ │ ├── AboutMe.jsx
+│ │ ├── AboutMe.css
+│ │ ├── MyStory.jsx
+│ │ ├── Hobbies.jsx
+│ │ └── Contact.jsx
+│ └── AboutUs/
+│ ├── AboutUs.jsx
+│ ├── AboutUs.css
+│ ├── Mission.jsx
+│ └── History.jsx
+├── main.jsx
+└── index.css
+⚙️ Instalação e Execução
 
-Um aplicativo React simples criado com Vite. Usado para demonstrar o React Router no bootcamp de Engenharia de Software da TripleTen.
->>>>>>> 1b5d1cf (update texts in Readme and Dashboard.js)
+### Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- npm ou yarn
+
+Passos para instalação:
+Clone o repositório:
+git clone git@github.com:tripleten-com/react-router-demo-pt.git
+Navegue até o diretório do projeto:
+cd react-router-demo-pt
+Instale as dependências:
+npm install
+Execute o projeto:
+npm run dev
+Acesse no navegador:
+O aplicativo estará disponível em http://localhost:3000
+🎯 Funcionalidades Principais
+
+### Roteamento Básico
+
+- Navegação entre páginas principais
+- URLs amigáveis e intuitivas
+- Header com links de navegação
+
+### Roteamento Aninhado
+
+- Subpáginas organizadas hierarquicamente
+- Uso do componente <Outlet /> para renderização de rotas filhas
+- Caminhos relativos para navegação interna
+
+### Componentes React Router
+
+- BrowserRouter - Provedor de contexto de roteamento
+- Routes - Container para definição de rotas
+- Route - Definição individual de cada rota
+- Link - Navegação declarativa entre páginas
+- Outlet - Renderização de componentes de rota
