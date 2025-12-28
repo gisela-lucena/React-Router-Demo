@@ -1,29 +1,50 @@
+import "./App.css";
+import { useEffect, useState } from "react"; // Nova importação
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard/Dashboard";
 import Reviews from "./Reviews/Reviews";
 import Header from "./Header/Header";
 import AboutUs from "./AboutUs/AboutUs";
-import AboutMe from "./AboutMe/AboutMe";
-// Importe os novos componentes
-import Contact from "./AboutMe/Contact/Contact";
-import Hobbies from "./AboutMe/Hobbies/Hobbies";
-import MyStory from "./AboutMe/MyStory/MyStory";
-import "./App.css";
 import SiteHistory from "./AboutUs/SiteHistory";
 import SiteMission from "./AboutUs/SiteMission";
+import AboutMe from "./AboutMe/AboutMe";
+import Contact from "./AboutMe/Contact";
+import Hobbies from "./AboutMe/Hobbies";
+import MyStory from "./AboutMe/MyStory";
+import Review from "./Reviews/Review";
 
 function App() {
-  // Adicione as rotas filhas à rota /about-me.
+  const [reviews, setReviews] = useState([]); // Nova variável useState
+
+  useEffect(() => {
+    // Capture os dados da avaliação a partir do servidor.
+    fetch("https://emoji-critic.pt-br.tripleten-services.com/v1/reviews")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        // Envie o corpo da resposta para a função setter.
+        setReviews(data);
+      })
+      .catch(console.error);
+    // Um array de dependência vazio significa que o hook roda apenas quando o componente é iniciado.
+  }, []);
+
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/reviews" element={<Reviews />} />
+        {/* Passe as avaliações como prop para o componente Reviews. */}
+        <Route path="/reviews" element={<Reviews reviews={reviews} />} />
+        <Route
+          path="/reviews/:reviewId"
+          element={<Review reviews={reviews} />}
+        />
         <Route path="/about-me" element={<AboutMe />}>
-          <Route path="my-story" element={<MyStory />} />
-          <Route path="hobbies" element={<Hobbies />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="hobbies" element={<Hobbies />} />
+          <Route path="my-story" element={<MyStory />} />
         </Route>
         <Route path="/about-us" element={<AboutUs />}>
           <Route path="site-history" element={<SiteHistory />} />

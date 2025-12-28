@@ -1,4 +1,4 @@
-import "../AboutContent.css";
+import "./AboutContent.css";
 
 function Hobbies() {
   return (
