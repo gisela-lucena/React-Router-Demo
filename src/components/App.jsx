@@ -12,6 +12,7 @@ import Contact from "./AboutMe/Contact";
 import Hobbies from "./AboutMe/Hobbies";
 import MyStory from "./AboutMe/MyStory";
 import Review from "./Reviews/Review";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   const [reviews, setReviews] = useState([]); // Nova variável useState
@@ -34,6 +35,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+        <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Dashboard />} />
         {/* Passe as avaliações como prop para o componente Reviews. */}
         <Route path="/reviews" element={<Reviews reviews={reviews} />} />
