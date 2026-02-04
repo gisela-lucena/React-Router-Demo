@@ -1,67 +1,56 @@
 README - Emoji Critic
-📖 Sobre o Projeto
-Emoji Critic é uma aplicação web desenvolvida em React para demonstrar conceitos de roteamento com React Router. O projeto simula um site de avaliações de emojis, onde os usuários podem navegar entre diferentes seções e visualizar informações organizadas através de rotas aninhadas.
+📖 About the Project
+Emoji Critic is a web application developed in React to demonstrate routing concepts with React Router. The project simulates an emoji review website where users can navigate between different sections and view information organized through nested routes.
 
-🚀 Demonstração
-O aplicativo permite navegação entre diferentes páginas:
+🚀 Demonstration
+The application allows navigation between different pages:
 
 Dashboard
-Página inicial com informações gerais
+Homepage with general information
 Reviews
-Seção de avaliações de emojis
+Emoji review section
 About Me
-Informações pessoais com subseções:
-Minha História (/about-me/my-story)
+Personal information with subsections:
+My Story (/about-me/my-story)
 Hobbies (/about-me/hobbies)
-Contato (/about-me/contact)
+Contact (/about-me/contact)
 About Us
-Informações sobre o site com subseções:
-Missão (/about-us/mission)
-História (/about-us/history)
-🛠️ Tecnologias Utilizadas
+Information about the website with subsections:
+Mission (/about-us/mission)
+History (/about-us/history)
+🛠️ Technologies Used
 React
-Biblioteca JavaScript para construção da interface
+JavaScript library for building the interface
 React Router DOM v6
-Gerenciamento de rotas e navegação
+Route management and navigation
 CSS3
-Estilização dos componentes
+Styling of components
 Vite
-Ferramenta de build e desenvolvimento
+Build and development tool
 
-### Pré-requisitos
+### Prerequisites
 
-- Node.js (versão 14 ou superior)
-- npm ou yarn
+- Node.js (version 14 or higher)
+- npm or yarn
 
-Passos para instalação:
-Clone o repositório:
-git clone git@github.com:tripleten-com/react-router-demo-pt.git
-Navegue até o diretório do projeto:
-cd react-router-demo-pt
-Instale as dependências:
-npm install
-Execute o projeto:
-npm run dev
-Acesse no navegador:
-O aplicativo estará disponível em http://localhost:3000
-🎯 Funcionalidades Principais
+🎯 Main Features
 
-### Roteamento Básico
+### Basic Routing
 
-- Navegação entre páginas principais
-- URLs amigáveis e intuitivas
-- Header com links de navegação
+- Navigation between main pages
+- Friendly and intuitive URLs
+- Header with navigation links
 
-### Roteamento Aninhado
+### Nested Routing
 
-- Subpáginas organizadas hierarquicamente
-- Uso do componente <Outlet /> para renderização de rotas filhas
-- Caminhos relativos para navegação interna
+- Hierarchically organized subpages
+- Use of the <Outlet /> component for rendering child routes
+- Relative paths for internal navigation
 
-### Componentes React Router
+### React Router Components
 
-- BrowserRouter - Provedor de contexto de roteamento
-- Routes - Container para definição de rotas
-- Route - Definição individual de cada rota
-- Link - Navegação declarativa entre páginas
-- Outlet - Renderização de componentes de rota
+- BrowserRouter - Routing context provider
+- Routes - Container for defining routes
+- Route - Individual definition of each route
+- Link - Declarative navigation between pages
+- Outlet - Rendering of route components
